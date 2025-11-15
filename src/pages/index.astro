@@ -1,11 +1,23 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TestNote from './test.md';  // optional, if you want to embed Markdown
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Keep the Welcome component -->
+  <Welcome />
+
+  <!-- Your own content below -->
+  <h2>My Latest Notes</h2>
+  <p>Here is a test note I added to the homepage.</p>
+
+  <!-- Example: embed a Markdown note -->
+  <TestNote />
+
+  <!-- Or just link to your notes -->
+  <ul>
+    <li><a href="/test">Test Note</a></li>
+    <li><a href="/another-note">Another Note</a></li>
+  </ul>
 </Layout>
